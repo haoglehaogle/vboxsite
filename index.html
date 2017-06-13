@@ -18,6 +18,7 @@
 				cursor: default;
 				display: block;
 				text-align: right;
+				z-index:1009;
 			}
 			#nav > ul > li {
 					display: inline-block;
@@ -35,36 +36,38 @@
 				cursor: default;
 				display: block;
 				text-align: center;
+				z-index:1009;
 			}
-
+			.large-header{
+			    opacity:0.8;
+			    background-color:#ccc;
+			    position:fixed;
+			    width:100%;
+			    height:100%;
+			    top:0px;
+			    left:0px;
+			    z-index:0;
+			}
+			#page-wrapper{
+			position:relative;
+			z-index:1000;
+			}
 	</style>
 </head>
 <body>
 <nav id="nav">
 	<ul>
-		<li style="white-space: nowrap;"><a class="icon fa-home" href="index.html"><span>Introduction</span></a></li>
-		<li class="opener" style="user-select: none; cursor: pointer; white-space: nowrap; opacity: 1;">
-			<a href="#" class="icon fa-bar-chart-o"><span>Dropdown</span></a>
-			
-		<ul class="" style="user-select: none; display: none; position: absolute;">
-				<li style="white-space: nowrap;"><a href="#" style="display: block;">Lorem ipsum dolor</a></li>
-				<li style="white-space: nowrap;"><a href="#" style="display: block;">Magna phasellus</a></li>
-				<li style="white-space: nowrap;"><a href="#" style="display: block;">Etiam dolore nisl</a></li>
-				<li class="opener" style="user-select: none; cursor: pointer; white-space: nowrap;">
-					<a href="#" style="display: block;">Phasellus consequat</a>
-					<ul style="user-select: none; display: none; position: absolute;" class="dropotron">
-						<li style="white-space: nowrap;"><a href="#" style="display: block;">Magna phasellus</a></li>
-						<li style="white-space: nowrap;"><a href="#" style="display: block;">Etiam dolore nisl</a></li>
-						<li style="white-space: nowrap;"><a href="#" style="display: block;">Phasellus consequat</a></li>
-					</ul>
-				</li>
-				<li style="white-space: nowrap;"><a href="#" style="display: block;">Veroeros feugiat</a></li>
-			</ul></li>
-		<li style="white-space: nowrap;"><a class="icon fa-cog" href="left-sidebar.html"><span>Left Sidebar</span></a></li>
-		<li style="white-space: nowrap;"><a class="icon fa-retweet" href="right-sidebar.html"><span>Right Sidebar</span></a></li>
-		<li style="white-space: nowrap;"><a class="icon fa-sitemap" href="no-sidebar.html"><span>No Sidebar</span></a></li>
+		<li style="white-space: nowrap;"><a class="icon fa-home" href="index.html"><span>Home</span></a></li>
+		<li style="white-space: nowrap;"><a class="icon fa-home" href="index.html"><span>Products</span></a></li>
+		<li style="white-space: nowrap;"><a class="icon fa-cog" href="left-sidebar.html"><span>Software</span></a></li>
+		<li style="white-space: nowrap;"><a class="icon fa-retweet" href="right-sidebar.html"><span>Cooperation</span></a></li>
+		<li style="white-space: nowrap;"><a class="icon fa-sitemap" href="no-sidebar.html"><span>About</span></a></li>
 	</ul>
 </nav>
+	<div id="large-header" class="large-header" style="height: 469px;">
+		<canvas id="demo-canvas" width="1887" height="469" class=""></canvas>
+	</div>	
+	
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
 				<!-- Wrapper -->
@@ -156,11 +159,13 @@
 								</div>
 							</section>
 					</div>
-			</div>
+			</div>		
 		<!-- Copyright -->
 		<div class="copyright">Copyright © 2016 Irocn.com&nbsp&nbsp;<a href="http://www.irocn.com/" target="_blank">埃络科技</a></div>
 		<!-- Scripts -->
 			<script src="./assets/js/jquery.min.js"></script>
 			<script src="./assets/js/skel.min.js"></script>
 			<script src="./assets/js/main.js"></script>
+			<script src="./assets/js/rAF.js"></script>
+			<script src="./assets/js/demo-2.js"></script>
 </body></html>
